@@ -1,0 +1,6 @@
+*
+!index-theme
+!index-theme/**
+!.gitignore
+!.htaccess
+!README.md

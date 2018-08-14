@@ -1,0 +1,71 @@
+<IfModule mod_autoindex.c>
+
+# Index options
+Options +Indexes
+IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +IconsAreLinks
+IndexIgnoreReset ON
+IndexIgnore .htaccess /index-theme .idea .DS_Store .git
+
+# <meta name="viewport" />
+IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+
+# Theme files
+HeaderName /index-theme/header.html
+ReadmeName /index-theme/footer.html
+IndexStyleSheet "/index-theme/style.css"
+
+# Default icon
+DefaultIcon /index-theme/icons/type-unknown.png
+
+# Icons for folders
+AddIcon /index-theme/icons/folder.png ^^DIRECTORY^^
+AddIcon /index-theme/icons/back.png ..
+
+# Icons for language
+AddIcon /index-theme/icons/language-unknown.png .rb .mustache .rust .source .apache .yml .jade .htaccess .java .editorconfig
+AddIcon /index-theme/icons/language-c.png .c .h
+AddIcon /index-theme/icons/language-cpp.png .cpp .cc .cxx .c++
+AddIcon /index-theme/icons/language-csharp.png .cs
+AddIcon /index-theme/icons/language-css.png .css .sass .scss .less .styl
+AddIcon /index-theme/icons/language-go.png .go
+AddIcon /index-theme/icons/language-html.png .html .htm .xhtml .shtml
+AddIcon /index-theme/icons/language-js.png .js .coffee
+AddIcon /index-theme/icons/language-lua.png .lua
+AddIcon /index-theme/icons/language-php.png .php .phtml
+AddIcon /index-theme/icons/language-python.png .py
+AddIcon /index-theme/icons/language-r.png .r
+AddIcon /index-theme/icons/language-sql.png .sql
+AddIcon /index-theme/icons/language-swift.png .swift
+AddIcon /index-theme/icons/language-typescript.png .ts
+AddIcon /index-theme/icons/language-vuejs.png .vue
+
+AddIcon /index-theme/icons/babel.png .babelrc
+AddIcon /index-theme/icons/docker.png .dockerignore Dockerfile
+AddIcon /index-theme/icons/git.png .gitignore .gitattributes
+
+# Icons for specific file-extensions
+AddIcon /index-theme/icons/adobe.png .ai .psd
+AddIcon /index-theme/icons/disc.png .iso
+AddIcon /index-theme/icons/json.png .json composer.lock
+AddIcon /index-theme/icons/file-structured.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv .yml .neon
+AddIcon /index-theme/icons/link.png .lnk .url
+AddIcon /index-theme/icons/markdown.png .md .markdown
+AddIcon /index-theme/icons/pdf.png .pdf
+AddIcon /index-theme/icons/rss.png .rss
+AddIcon /index-theme/icons/xml.png .xml
+AddIcon /index-theme/icons/type-archive.png .7z .bz2 .cab .gz .tar .rar .zip .z
+AddIcon /index-theme/icons/type-audio.png .aac .aif .aifc .aiff .ape .au .flac .iff .m4a .mid .mp3 .mpa .ra .wav .wma .f4a .f4b .oga .ogg .xm .it .s3m .mod .m3u .m3u8 .pls .pls8
+AddIcon /index-theme/icons/type-console.png .bat .cmd .sh Makefile
+AddIcon /index-theme/icons/type-document.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+AddIcon /index-theme/icons/type-image.png .bmp .ico .gif .jpg .jpeg .jpe .png .tiff .tif .svg .svgz .webp .au .eps
+AddIcon /index-theme/icons/type-package.png .pkg .dmg
+AddIcon /index-theme/icons/type-text.png .txt .nfo
+AddIcon /index-theme/icons/type-video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv .webm .m4v .f4v .f4p .ogv
+
+# Icons by type
+AddIconByType (TXT,/index-theme/icons/type-text.png) text/*
+AddIconByType (IMG,/index-theme/icons/type-image.png) image/*
+AddIconByType (SND,/index-theme/icons/type-audio.png) audio/*
+AddIconByType (VID,/index-theme/icons/type-video.png) video/*
+
+</IfModule>
